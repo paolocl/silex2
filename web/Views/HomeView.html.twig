@@ -1,0 +1,13 @@
+{% extends "LayoutView.html.twig" %}
+
+{% block title 'HomePage' %}
+
+{% block main %}
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur, ipsa iusto labore libero nam provident quam recusandae rem, sed sit voluptas? Assumenda consequuntur cumque eum inventore magni velit, voluptatum? </p>
+
+    {% for photo in photos['photos']['photo'] %}
+        <img src="https://farm{{ photo['farm'] }}.staticflickr.com/{{ photo['server'] }}/{{ photo['id']
+    }}_{{ photo['secret'] }}.jpg" alt="">
+    {% endfor %}
+{% endblock %}
+
